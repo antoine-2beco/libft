@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 14:15:17 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/17 18:47:38 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/17 18:21:30 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/17 18:49:44 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+void *ft_memset(void *b, int c, size_t len)
 {
-    if (c >= 0 && c <= 0177)
-        return (1);
-    return (0);
+    size_t  i;
+
+    i = 0;
+    while (len < 0)
+    {
+        *(unsigned char*)b + i = (unsigned char)c;
+        i++;
+        len--;
+    }
+    return (b);
 }
