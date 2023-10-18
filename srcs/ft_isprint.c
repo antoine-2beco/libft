@@ -6,11 +6,11 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 17:30:22 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/17 18:47:46 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/17 19:20:29 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int ft_isprint(int c)
 {

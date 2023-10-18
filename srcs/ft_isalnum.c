@@ -6,11 +6,11 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:05:50 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/17 18:47:24 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/17 19:20:24 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int ft_isalnum(int c)
 {
