@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 18:14:40 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/17 19:20:34 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/18 16:04:45 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/18 16:09:00 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libc.h"
 
-int ft_strlen(const char *s)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    long long unsigned i;
+	unsigned int	i;
+	char			*pdst;
+	char			*psrc;
 
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return (i);
+	i = 0;
+	pdst = dst;
+	psrc = (char *)src;
+	while (i < len && (dst != 0 || src != 0))
+	{
+		pdst[i] = psrc[i];
+		i++;
+	}
+	return (dst);
 }
