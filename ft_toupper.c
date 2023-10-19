@@ -1,37 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 16:04:45 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/19 16:31:58 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/19 17:05:07 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/19 17:10:29 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_toupper(int c)
 {
-	size_t	i;
-	char	*pdst;
-	char	*psrc;
-
-	i = -1;
-	pdst = (char *)dst;
-	psrc = (char *)src;
-	if (pdst > psrc)
-	{
-		while ((int)(--len) >= 0)
-		{
-			*(pdst + len) = *(psrc + len);
-		}
-	}
-	else
-	{
-		while (++i < len && (dst != 0 || src != 0))
-			*(pdst + i) = *(psrc + i);
-	}
-	return (dst);
+	if (c >= 97 && c <= 122)
+		return ((unsigned char)(c) - 32);
+	return (c);
 }

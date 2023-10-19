@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 16:04:45 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/19 16:31:58 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/19 17:16:07 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/19 17:44:19 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	char	*pdst;
-	char	*psrc;
+	int	i;
 
-	i = -1;
-	pdst = (char *)dst;
-	psrc = (char *)src;
-	if (pdst > psrc)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		while ((int)(--len) >= 0)
-		{
-			*(pdst + len) = *(psrc + len);
-		}
+		if (s[i] == (char)(c))
+			return ((char *)(s + i));
+		s++;
 	}
-	else
-	{
-		while (++i < len && (dst != 0 || src != 0))
-			*(pdst + i) = *(psrc + i);
-	}
-	return (dst);
+	if (s[i] == (char)(c))
+		return ((char *)(s + i));
+	return (NULL);
 }
