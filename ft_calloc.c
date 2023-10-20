@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:50:16 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/20 14:59:50 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/20 17:05:48 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/20 17:15:30 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int	i;
+	unsigned long	i;
+	char			*tab;
 
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == (char)(c))
-			return ((char *)(s + i));
-		i--;
-	}
-	return (NULL);
+	i = 0;
+	tab = malloc(size * count);
+	if (!tab)
+		return (NULL);
+	while (i < (size * count))
+		tab[i++] = 0;
+	return (tab);
 }

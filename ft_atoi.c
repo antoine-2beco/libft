@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:50:16 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/20 14:59:50 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/20 16:44:13 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/20 17:04:35 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	int	i;
+	int				n;
+	long long int	res;
+	size_t			i;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	n = 1;
+	res = 0;
+	i = 0;
+	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n')
+		|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
+		i++;
+	if ((str[i] == '+') || (str[i] == '-'))
 	{
-		if (s[i] == (char)(c))
-			return ((char *)(s + i));
-		i--;
+		if (str[i] == '-')
+			n = -n;
+		i++;
 	}
-	return (NULL);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = ((res * 10) + (str[i] - '0'));
+		i++;
+	}
+	return (res * n);
 }

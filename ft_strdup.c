@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 17:50:16 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/20 14:59:50 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/20 17:16:21 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/20 17:23:28 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
+	unsigned long	i;
+	char			*tab;
 
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == (char)(c))
-			return ((char *)(s + i));
-		i--;
-	}
-	return (NULL);
+	i = -1;
+	tab = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!tab)
+		return (NULL);
+	while (s1[++i] != '\0')
+		tab[i] = s1[i];
+	tab[i] = '\0';
+	return (tab);
 }
