@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/20 17:19:46 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:26:10 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct s_list
+/*typedef struct s_list
 {
 	void			*content;
 	size_t			size;
 	struct s_list	*next;
-}					t_list;
+}					t_list;*/
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
