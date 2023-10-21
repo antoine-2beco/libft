@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/20 17:26:10 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/21 14:03:57 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,9 @@ int		ft_atoi(const char *str);
 
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
