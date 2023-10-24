@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:42:29 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/19 16:48:44 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/24 12:40:09 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 		return (dstsize);
 	if (dstsize < i)
 		return (ft_strlen(src) + dstsize);
-	return (dest_len + ft_strlen(src)); 
+	return (dest_len + ft_strlen(src));
 }

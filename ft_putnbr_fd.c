@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:47:43 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/21 16:58:06 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:16:28 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	nb;
-	int		neg;
-	char	temp;
+	char		str[13];
+	long long	nb;
+	int			i;
+	int			neg;
 
 	nb = n;
-	neg = 1;
+	i = 11;
+	str[12] = '\0';
 	if (nb == 0)
 		write(fd, "0", 1);
 	if (nb < 0)
@@ -27,12 +29,12 @@ void	ft_putnbr_fd(int n, int fd)
 		neg = -1;
 		nb *= -1;
 	}
-	while (nb > 0)
+	while (nb != 0)
 	{
-		temp = (char)(nb % 10) + '0';
-		write(fd, &temp, sizeof(temp));
+		str[i--] = (char)(nb % 10) + '0';
 		nb /= 10;
 	}
 	if (neg < 0)
-		write(fd, "-", 1);
+		str[i--] = '-';
+	ft_putstr_fd((char *)(str + (++i)), fd);
 }
