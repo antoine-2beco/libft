@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 18:21:30 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/25 13:17:13 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/25 14:53:57 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/25 15:22:58 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*p;
+	t_list	*out;
+	t_list	*new;
 
-	p = (char *)b;
-	while (len > 0)
+	out = NULL;
+	while (lst)
 	{
-		p[len - 1] = c;
-		len--;
+		new = ft_lstnew((*f)(lst->content));
+		if (!new)
+		{
+			while (out)
+			{
+				new = out->next;
+				(*del)(out->content);
+				free(out);
+				out = new;
+			}
+			lst = NULL;
+			return (NULL);
+		}
+		ft_lstadd_back(&out, new);
+		lst = lst->next;
 	}
-	return (b);
+	return (out);
 }

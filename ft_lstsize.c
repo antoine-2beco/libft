@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 18:21:30 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/25 13:17:13 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/25 13:59:26 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/25 14:04:34 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_lstsize(t_list *lst)
 {
-	char	*p;
+	int	i;
 
-	p = (char *)b;
-	while (len > 0)
+	i = 0;
+	while (lst)
 	{
-		p[len - 1] = c;
-		len--;
+		i++;
+		lst = lst->next;
 	}
-	return (b);
+	return (i);
 }

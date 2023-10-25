@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 18:21:30 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/25 13:17:13 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/25 14:36:27 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/25 14:48:13 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	char	*p;
+	t_list	*temp;
 
-	p = (char *)b;
-	while (len > 0)
+	if (!del || !lst || !*lst)
+		return ;
+	while (lst && *lst)
 	{
-		p[len - 1] = c;
-		len--;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
-	return (b);
 }
