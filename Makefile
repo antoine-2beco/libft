@@ -6,7 +6,7 @@
 #    By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 13:21:18 by ade-beco          #+#    #+#              #
-#    Updated: 2023/10/25 15:08:06 by ade-beco         ###   ########.fr        #
+#    Updated: 2023/10/25 15:35:02 by ade-beco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ all:		$(OBJS) $(NAME)
 				@echo "Compiling OK!"
 
 $(NAME):	$(OBJS)
-				@echo "Creating executable $@"
+				@echo "Creating executable"
 				@$(LIBC) $(NAME) $(OBJS)
 				@echo "Job's done!"
 clean:
@@ -50,7 +50,7 @@ fclean:		clean
 				@echo "Cleaned up!"
 
 bonus:		$(OBJS) $(OBJS_BONUS)
-				@echo "Creating executable $@"
+				@echo "Creating executable"
 				@$(LIBC) $(NAME) $(OBJS) $(OBJS_BONUS)
 				@echo "Job's done!"
 
