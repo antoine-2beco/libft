@@ -6,11 +6,9 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:28:06 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/21 16:29:49 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/26 13:58:40 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

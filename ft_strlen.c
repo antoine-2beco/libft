@@ -6,15 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:14:40 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/19 16:37:28 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:00:10 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_strlen(const char *s)
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i] != '\0')

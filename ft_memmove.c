@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:04:45 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/24 14:12:56 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/25 16:44:59 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (pdst > psrc)
 	{
 		while ((int)(--len) >= 0)
-		{
 			*(pdst + len) = *(psrc + len);
-		}
 	}
 	else
 	{
