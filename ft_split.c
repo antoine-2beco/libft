@@ -6,18 +6,24 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:14:08 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 14:00:49 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:23:00 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_sep(char s, char c)
+char	**ft_free(char **strs, size_t len)
 {
-	if (s == c)
-		return (1);
-	else
-		return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+	return (NULL);
 }
 
 int	ft_count_str(char *s, char c)
@@ -29,11 +35,11 @@ int	ft_count_str(char *s, char c)
 	count = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] != '\0' && ft_is_sep(s[i], c))
+		while (s[i] != '\0' && (s[i] == c))
 			i++;
 		if (s[i] != '\0')
 			count++;
-		while (s[i] != '\0' && !ft_is_sep(s[i], c))
+		while (s[i] != '\0' && !(s[i] == c))
 			i++;
 	}
 	return (count);
@@ -44,7 +50,7 @@ int	ft_strlensep(char *s, char c)
 	int	l;
 
 	l = 0;
-	while (s[l] != '\0' && !ft_is_sep(s[l], c))
+	while (s[l] != '\0' && !(s[l] == c))
 		l++;
 	return (l);
 }
@@ -75,20 +81,21 @@ char	**ft_split(char const *s, char c)
 	char	**strings;
 
 	i = 0;
-	strings = (char **)malloc (sizeof(char *)
-			* (ft_count_str((char *)(s), c) + 1));
+	strings = (char **)malloc (sizeof(s) * (ft_count_str((char *)(s), c) + 1));
 	if (!strings)
 		return (NULL);
 	while (*s != '\0')
 	{
-		while (*s != '\0' && ft_is_sep(*s, c))
+		while (*s != '\0' && (*s == c))
 			s++;
 		if (*s != '\0')
 		{
 			strings[i] = ft_getstr((char *)(s), c);
+			if (strings[i] == NULL)
+				return (ft_free(strings, i));
 			i++;
 		}
-		while (*s && !ft_is_sep(*s, c))
+		while (*s && !(*s == c))
 			s++;
 	}
 	strings[i] = 0;

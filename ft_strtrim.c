@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:45:47 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/21 14:38:52 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/26 15:32:12 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > start && (s1[end] == '\0' || check_trim(s1[end], set)))
 		end--;
-	end++;
+	if (!(s1[0] == '\0'))
+		end++;
 	str = malloc(sizeof(char) * ((end - start) + 1));
 	if (!str)
 		return (NULL);
