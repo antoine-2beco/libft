@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:05:48 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 13:24:09 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:05:52 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*tab;
 
-	if ((size * count >= 65535) || (size * count < 0))
+	if ((size != 0 && ((count * size) / size) != count)
+		|| (size >= 2147483647 && count >= 2147483647))
 		return (NULL);
 	else if ((size >= 65535) && (count >= 65535))
 		return (NULL);

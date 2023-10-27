@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 13:42:00 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/25 13:57:10 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:06:34 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (lst)
+	if (lst && new)
 	{
 		if (*lst)
 			new->next = *lst;
