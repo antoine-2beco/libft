@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:22:54 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 14:00:51 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:16:26 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	len(long nb)
+static int	len(long nb)
 {
 	int	len;
 

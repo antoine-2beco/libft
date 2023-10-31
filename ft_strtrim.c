@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:45:47 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 15:32:12 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:44:45 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_trim(char c, char const *set)
+static int	check_trim(char c, char const *set)
 {
 	unsigned int	i;
 

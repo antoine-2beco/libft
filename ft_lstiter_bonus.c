@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 16:39:09 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:28:09 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/25 14:49:55 by ade-beco          #+#    #+#             */
+/*   Updated: 2023/10/31 12:18:00 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
 }

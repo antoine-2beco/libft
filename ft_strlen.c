@@ -6,11 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:14:40 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 14:00:10 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/31 11:57:23 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#inlcude "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	unsigned int	i;
 

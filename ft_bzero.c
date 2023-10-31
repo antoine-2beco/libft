@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 20:00:55 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/18 14:33:35 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:03:26 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*p;
+	unsigned char	*p;
 
-	p = (char *)s;
+	p = (unsigned char *)s;
 	while (n > 0)
 	{
 		p[n - 1] = 0;

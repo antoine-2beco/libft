@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:14:08 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 15:23:00 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:31:42 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_free(char **strs, size_t len)
+static char	**ft_free(char **strs, size_t len)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ char	**ft_free(char **strs, size_t len)
 	return (NULL);
 }
 
-int	ft_count_str(char *s, char c)
+static int	ft_count_str(char *s, char c)
 {
 	int	i;
 	int	count;
@@ -45,7 +45,7 @@ int	ft_count_str(char *s, char c)
 	return (count);
 }
 
-int	ft_strlensep(char *s, char c)
+static int	ft_strlensep(char *s, char c)
 {
 	int	l;
 
@@ -55,7 +55,7 @@ int	ft_strlensep(char *s, char c)
 	return (l);
 }
 
-char	*ft_getstr(char *s, char c)
+static char	*ft_getstr(char *s, char c)
 {
 	int		i;
 	int		l;
