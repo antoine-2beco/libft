@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:10:59 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:22:38 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/31 13:10:10 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
-	while (str1[i] && str2[i] && i < n && (n != 0))
+	while (i < n && (n != 0))
 	{
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
