@@ -6,7 +6,7 @@
 #    By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 13:21:18 by ade-beco          #+#    #+#              #
-#    Updated: 2023/10/31 13:01:27 by ade-beco         ###   ########.fr        #
+#    Updated: 2023/10/31 16:22:19 by ade-beco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,4 +56,4 @@ bonus:		$(OBJS) $(OBJS_BONUS)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
