@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:47:43 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:27:45 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/10/31 12:57:42 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char		str[13];
-	long 		nb;
+	long		nb;
 	int			i;
 	int			neg;
 
