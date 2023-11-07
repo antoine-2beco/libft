@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:05:07 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 14:01:25 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:43:13 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
-		return ((unsigned char)(c) - 32);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
 	return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:18:11 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 14:07:21 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:40:55 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*out;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	out = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!out)

@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:05:50 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/26 13:56:19 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:18:10 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
-	if ((c < 'A' || (c > 'Z' && c < 'a') || c > 'z') && (c < '0' || c > '9'))
-		return (0);
-	return (1);
+	return (ft_isalpha(c) || ft_isdigit(c);
 }

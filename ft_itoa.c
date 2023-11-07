@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:22:54 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:16:26 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:14:44 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	len(long nb)
+/*static int	len(long nb)
 {
 	int	len;
 
@@ -30,6 +30,15 @@ static int	len(long nb)
 		len++;
 	}
 	return (len);
+}*/
+
+static int len(long nb)
+{
+	if (nb < 10  && nb >= 0)
+		return (1);
+	if (nb < 0 && nb > -10)
+		return (2);
+	return (len(nb / 10) + 1);
 }
 
 char	*ft_itoa(int n)

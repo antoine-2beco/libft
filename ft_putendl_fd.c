@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:42:30 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/27 17:11:33 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:36:33 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], sizeof(s[i]));
-		i++;
-	}
+	ft_putstr_fd(s);
 	write(fd, "\n", 1);
 }

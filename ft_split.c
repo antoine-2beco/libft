@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:14:08 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:31:42 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:49:38 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char	*ft_getstr(char *s, char c)
 
 	i = 0;
 	l = ft_strlensep(s, c);
-	out = malloc(sizeof(char) * l + 1);
+	out = malloc(sizeof(char) * (l + 1));
 	if (!out)
 		return (NULL);
 	while (i < l)
@@ -80,6 +80,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	char	**strings;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	strings = (char **)malloc (sizeof(s) * (ft_count_str((char *)(s), c) + 1));
 	if (!strings)

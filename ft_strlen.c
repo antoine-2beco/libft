@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:14:40 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:55:47 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:40:18 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')

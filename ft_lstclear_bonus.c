@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:36:27 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:17:52 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:22:54 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (!del || !lst || !*lst)
+	if (!del || !lst)
 		return ;
-	while (lst && *lst)
+	while (*lst)
 	{
 		temp = (*lst)->next;
 		ft_lstdelone(*lst, del);

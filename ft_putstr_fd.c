@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:39:09 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/31 12:28:09 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:51:55 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
