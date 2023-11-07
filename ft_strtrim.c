@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:45:47 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/07 15:48:52 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:12:19 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	i = 0;
 	while (start < end)
-	{
-		str[i] = s1[start];
-		start++;
-		i++;
-	}
+		str[i++] = s1[start++];
 	str[i] = '\0';
 	return (str);
 }

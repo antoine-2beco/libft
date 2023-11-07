@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 16:42:30 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/07 15:36:33 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:13:24 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s);
+	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

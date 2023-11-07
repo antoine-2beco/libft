@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:05:50 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/07 15:18:10 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:12:35 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

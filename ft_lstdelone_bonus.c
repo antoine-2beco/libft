@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:32:11 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/07 15:24:14 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:11:41 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,4 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	del(lst->content);
 	free(lst);
-
 }

@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:53:57 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/07 15:27:00 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:30:40 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			while (out)
 			{
 				new = out->next;
-				ft_lstdelone(out, (*del)(void *));
+				(*del)(out->content);
+				free(out);
 				out = new;
 			}
 			lst = NULL;

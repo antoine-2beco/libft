@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 16:04:45 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/10/25 16:44:59 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:48:19 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*pdst;
 	char	*psrc;
 
+	if (!dst && !src)
+		return (NULL);
 	i = -1;
 	pdst = (char *)dst;
 	psrc = (char *)src;
