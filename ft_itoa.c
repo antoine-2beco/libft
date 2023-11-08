@@ -6,31 +6,11 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 15:22:54 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/07 17:11:23 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:36:53 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*static int	len(long nb)
-{
-	int	len;
-
-	len = 0;
-	if (nb == 0)
-		len++;
-	if (nb < 0)
-	{
-		nb *= -1;
-		len++;
-	}
-	while (nb > 0)
-	{
-		nb /= 10;
-		len++;
-	}
-	return (len);
-}*/
 
 static int	len(long nb)
 {
