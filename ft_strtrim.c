@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:45:47 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/07 17:12:19 by ade-beco         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:58:02 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	end;
 	char			*str;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	while (s1[start] != '\0' && check_trim(s1[start], set))
