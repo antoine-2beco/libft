@@ -6,7 +6,7 @@
 #    By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 13:21:18 by ade-beco          #+#    #+#              #
-#    Updated: 2024/01/08 11:39:15 by ade-beco         ###   ########.fr        #
+#    Updated: 2024/01/08 16:15:05 by ade-beco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,28 +31,26 @@ INC			=	-I ./includes
 all:		$(OBJS) $(NAME)
 
 %.o:		%.c
-				@echo "Compiling $<"
 				@$(CC) $(CFLAGS) -c $(INC) $< -o $(<:c=o)
-				@echo "Compiling OK!"
 
 $(NAME):	$(OBJS)
-				@echo "Creating executable"
+				@echo "Creating Libft Executable..."
 				@$(LIBC) $(NAME) $(OBJS)
-				@echo "Job's done!"
+				@echo "OK "
 clean:
-				@echo "Cleaning objects..."
+				@echo "Cleaning Libft Objects..."
 				@rm -f $(OBJS) $(OBJS_BONUS)
-				@echo "Cleaned up!"
+				@echo "OK !"
 
 fclean:		clean
-				@echo "Cleaning..."
+				@echo "Cleaning Libft..."
 				@rm -f $(NAME)
-				@echo "Cleaned up!"
+				@echo "OK !"
 
 bonus:		$(OBJS) $(OBJS_BONUS)
-				@echo "Creating executable"
+				@echo "Creating Libft with Bonus Executable..."
 				@$(LIBC) $(NAME) $(OBJS) $(OBJS_BONUS)
-				@echo "Job's done!"
+				@echo "OK !"
 
 re:			fclean all
 
