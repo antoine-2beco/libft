@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/01/08 11:39:05 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/01/09 18:11:26 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
+// madatory part
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -54,6 +56,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+// bonus part
 typedef struct s_list
 {
 	void			*content;
@@ -70,7 +73,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+// personnal adding
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
+
+// printf
+int		ft_printf(const char *str, ...);
+int		ft_printf_base(unsigned long long nbr, int base, int lower);
+int		ft_printf_putchar(char c);
+int		ft_printf_putstr(char *s, int lower);
 
 #endif
