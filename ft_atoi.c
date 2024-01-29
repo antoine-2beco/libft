@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:44:13 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/01/29 13:07:59 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/01/29 13:33:09 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_atoi(const char *str)
+long long int	ft_atoi(const char *str)
 {
 	int				n;
 	long long int	res;
