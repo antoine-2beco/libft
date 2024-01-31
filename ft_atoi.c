@@ -6,13 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:44:13 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/01/29 13:33:09 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/01/31 17:52:28 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
 	int				n;
 	long long int	res;
@@ -31,12 +31,11 @@ long long int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		temp = res;
-		res = ((res * 10) + (str[i] - '0'));
-		if (temp > res && n == -1)
-			return (0);
-		if (temp > res && n == 1)
-			return (-1);
-		i++;
+		res = ((res * 10) + (str[i++] - '0'));
+		if (temp > res && (n == -1 || n == 1))
+			return ((long int)INT32_MAX + 1);
 	}
+	if (!str[i] || !ft_isdigit(str[i]))
+		return ((long int)INT32_MAX + 1);
 	return (res * n);
 }

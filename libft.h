@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/01/29 13:34:23 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/01/31 17:52:34 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <limits.h>
 
 // madatory part
 int				ft_isalpha(int c);
@@ -40,7 +41,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strnstr(const char *haystack,
 					const char *needle, size_t len);
-long long int	ft_atoi(const char *str);
+long int		ft_atoi(const char *str);
 
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *s1);
