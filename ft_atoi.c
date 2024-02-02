@@ -6,12 +6,13 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:44:13 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/01/31 17:52:28 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/02/02 16:45:32 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// modified
 long int	ft_atoi(const char *str)
 {
 	int				n;
@@ -35,7 +36,7 @@ long int	ft_atoi(const char *str)
 		if (temp > res && (n == -1 || n == 1))
 			return ((long int)INT32_MAX + 1);
 	}
-	if (!str[i] || !ft_isdigit(str[i]))
+	if (str[i] || (i == 1 && (str[i - 1] == '+' || str[i - 1] == '-')))
 		return ((long int)INT32_MAX + 1);
 	return (res * n);
 }
