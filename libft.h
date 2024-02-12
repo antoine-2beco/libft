@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/01/31 17:52:34 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/02/12 10:16:46 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,12 @@ int				ft_printf(const char *str, ...);
 int				ft_printf_base(unsigned long long nbr, int base, int lower);
 int				ft_printf_putchar(char c);
 int				ft_printf_putstr(char *s, int lower);
+
+// get_next_line
+# ifndef BUFFER_SIZE  
+#  define BUFFER_SIZE 10
+# endif
+
+char			*get_next_line(int fd);
 
 #endif
