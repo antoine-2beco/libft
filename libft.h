@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/03/18 10:53:57 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/03/18 14:18:54 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 void			ft_putchar(char c);
 void			ft_putstr(char *s);
 t_list			*ft_lstget(t_list *lst, int n);
-
+char			*ft_strappend(char **s1, const char *s2);
 
 // printf
 int				ft_printf(const char *str, ...);
