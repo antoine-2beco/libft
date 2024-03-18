@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 13:59:26 by ade-beco          #+#    #+#             */
-/*   Updated: 2023/11/08 18:09:03 by ade-beco         ###   ########.fr       */
+/*   Created: 2023/10/25 14:04:42 by ade-beco          #+#    #+#             */
+/*   Updated: 2024/03/18 10:40:05 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
 	while (lst)
 	{
-		i++;
+		if (!lst->next)
+			return (lst);
 		lst = lst->next;
 	}
-	return (i);
+	return (lst);
 }
