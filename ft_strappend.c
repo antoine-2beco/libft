@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:03:34 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/03/18 14:19:53 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/03/25 15:44:45 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strappend(char **s1, const char *s2)
 {
 	char	*str;
-	int	n;
+	int		n;
 
 	if (!*s1 || !s2)
 		return (NULL);
