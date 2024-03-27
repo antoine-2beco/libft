@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:14:40 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/02/12 11:39:07 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/03/27 11:30:08 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ size_t	ft_strlen(const char *s)
 		return (0);
 	i = 0;
 	while (s[i] != '\0')
+	{
+		if (i >= SIZE_T_MAX)
+			return (0);
 		i++;
+	}
 	return (i);
 }
