@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lst_to_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/25 14:09:25 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/05/13 15:02:30 by ade-beco         ###   ########.fr       */
+/*   Created: 2024/05/13 11:32:37 by ade-beco          #+#    #+#             */
+/*   Updated: 2024/05/13 15:03:16 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+char	**ft_lst_to_string(t_list **lst)
 {
+	int		i;
 	t_list	*temp;
+	char	**content;
 
-	if (!lst || !new)
-		return ;
+	i = 0;
 	temp = *lst;
-	if (*lst)
-		ft_lstlast(temp)->next = new;
-	else
-		*lst = new;
+	content = (char **)malloc(ft_lstsize(temp) * sizeof(char *));
+	if (!content)
+		return (NULL);
+	while (temp)
+	{
+		content[i] = (char *)malloc(ft_strlen(temp->content) * sizeof(char));
+		if (!content[i])
+			return (NULL);
+		content[i] = temp->content;
+		temp = temp->next;
+		i++;
+	}
+	return (content);
 }
