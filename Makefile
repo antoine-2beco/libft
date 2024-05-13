@@ -6,7 +6,7 @@
 #    By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 13:21:18 by ade-beco          #+#    #+#              #
-#    Updated: 2024/05/13 12:49:05 by ade-beco         ###   ########.fr        #
+#    Updated: 2024/05/13 16:40:03 by ade-beco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS		=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strl
 
 SRCS_BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-SRCS_PERS	=	ft_putstr.c ft_putchar.c ft_printf.c ft_printf_utils.c get_next_line.c ft_lstget.c ft_strappend.c ft_string_to_lst.c ft_lst_to_string.c
+SRCS_PERS	=	ft_putstr.c ft_putchar.c ft_printf.c ft_printf_utils.c get_next_line.c ft_lstget.c ft_strappend.c ft_string_to_lst.c ft_lst_to_string.c ft_strsmaller.c
 
 OBJS		=	$(SRCS:.c=.o) $(SRCS_BONUS:.c=.o) $(SRCS_PERS:.c=.o)
 
