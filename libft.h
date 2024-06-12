@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/05/15 13:25:54 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/06/12 11:51:29 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,11 @@ int				ft_strsmaller(char *a, char *b);
 int				ft_strcmp(const char *s1, const char *s2);
 
 // printf
-int				ft_printf(const char *str, ...);
-int				ft_printf_base(unsigned long long nbr, int base, int lower);
-int				ft_printf_putchar(char c);
-int				ft_printf_putstr(char *s, int lower);
+int				ft_printf(const char *str, int fd, ...);
+int				ft_printf_base(unsigned long long nbr, int base, \
+					int lower, int fd);
+int				ft_printf_putchar(char c, int fd);
+int				ft_printf_putstr(char *s, int lower, int fd);
 
 // get_next_line
 # ifndef BUFFER_SIZE  
