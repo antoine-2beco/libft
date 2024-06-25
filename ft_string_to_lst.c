@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:00:27 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/05/13 15:13:15 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:57:17 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ t_list	*ft_string_to_lst(char **content)
 	i = 0;
 	cpy = NULL;
 	if (!*content || !content[0])
-		return (NULL);
-	lst = (t_list *)malloc(sizeof(t_list));
-	if (!lst)
 		return (NULL);
 	while (content[i])
 	{
