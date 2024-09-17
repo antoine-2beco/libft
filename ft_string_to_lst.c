@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 11:00:27 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/09/16 11:32:17 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:11:38 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,10 @@ t_list	*ft_lstnewdup(void *content)
 t_list	*ft_string_to_lst(char **content)
 {
 	int		i;
-	char	*cpy;
 	t_list	*lst;
 	t_list	*node;
 
 	i = 0;
-	cpy = NULL;
 	if (!*content || !content[0])
 		return (NULL);
 	while (content[i])
