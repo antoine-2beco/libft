@@ -6,7 +6,7 @@
 /*   By: ade-beco <ade-beco@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:01:53 by ade-beco          #+#    #+#             */
-/*   Updated: 2024/06/12 11:51:29 by ade-beco         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:15:25 by ade-beco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ t_list			*ft_string_to_lst(char **content);
 char			**ft_lst_to_string(t_list **lst);
 int				ft_strsmaller(char *a, char *b);
 int				ft_strcmp(const char *s1, const char *s2);
+t_list			*ft_lstnewdup(void *content);
 
 // printf
 int				ft_printf(const char *str, int fd, ...);
